@@ -6,8 +6,17 @@ This is a simple calculator API built using NestJS framework. It provides a sing
 
 The implementation of the calculator API follows a basic approach. The `CalculatorController` class defines a single POST endpoint `/calculate` which accepts a JSON body containing two operands and the desired operation. The controller performs the requested operation and returns the result as a JSON response.
 
-The rationale behind this implementation is to perform basic calculations using an HTTP API. The code is takes advantage of using NestJS decorators.
+The implementation of the solution in the provided code aims to perform basic arithmetic calculations based on the operands and operation received in the request payload. Here is a rationale for the decisions made:
 
+* A request and response interface were made to be used in the controller from a dto
+
+* Destructuring the CalculatorRequest Object: The code starts by destructuring the CalculatorRequest object received in the request body from the dto file. This gives easy access to the operand1, operand2, and operation values, making the code more readable.
+
+* Handling the Operation: The code used a switch statement to quickly switch between a given operational value value. This approach provides a clear and easy way to handle different arithmetic operations. Each case calculates the result by applying the respective operation to the operands.
+
+* Returning the Response: Finally, the response object is returned to the client, containing the problem as well as the solution. This allows the client to retrieve the calculated result of the requested arithmetic operation.
+
+* Unit tests: The 'calculator.controller.spec' file has a test case for all four operations as well as an invalid operation.
 ## Usage
 
 npm run start

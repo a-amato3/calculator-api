@@ -5,10 +5,10 @@ import { CalculatorRequest, CalculatorResponse } from './calculator.dto';
 export class CalculatorController {
   @Post('/calculate')
   calculate(@Body() request: CalculatorRequest): CalculatorResponse {
-    const { operand1, operand2, operation } = request;
+    const { operand1, operand2, operation }: CalculatorRequest = request;
     let solution: number;
 
-    // Performs the appropriate operation based on the requested operation
+    // Performs the appropriate operation based on the requested operation from the body
     switch (operation) {
       case '+':
         solution = operand1 + operand2;
