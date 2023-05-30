@@ -27,11 +27,9 @@ npm run start
 
 3. Use cURL or Postman to send a POST request to the /calculator/calculate endpoint with the following payload:
 ```
-    {
-      "operand1": 10,
-      "operand2": 5,
-      "operation": "+"
-    }
+curl -X POST -H "Content-Type: application/json" -d '{
+  "operand1": 10, "operand2": 5, "operation": "+"
+  }' http://localhost:3000/calculator/calculate
 ```
 Replace the values of operand1, operand2, and operation as per your calculation requirements.
 
